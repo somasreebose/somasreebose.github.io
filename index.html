@@ -122,32 +122,49 @@
                 </div>
                 
                 <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
-                    <div class="glass-card p-10 rounded-[2.5rem] fade-in border-white/5 h-full">
-                        <div class="w-12 h-12 glass rounded-2xl flex items-center justify-center text-primary mb-8 shadow-inner">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-8 tracking-tight uppercase tracking-widest text-[12px]">Academic Profile</h3>
-                        <div class="space-y-8">
-                            <div class="flex justify-between items-start border-b border-white/5 pb-6">
-                                <div class="flex-grow">
-                                    <p class="text-[9px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-1">Bachelor of Technology</p>
-                                    <p class="text-sm font-bold text-white leading-tight">Netaji Subhash <br>Engineering College</p>
-                                    <p class="text-[10px] text-slate-500 font-medium mt-1">2021 — 2025</p>
-                                </div>
-                                <div class="text-right ml-4">
-                                    <p class="text-2xl font-black text-primary">8.25</p>
-                                    <p class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">CGPA</p>
-                                </div>
+                    <div class="glass-card p-10 rounded-[2.5rem] fade-in border-white/5 h-full relative overflow-hidden group/academic">
+                        <!-- Subtle Background Pattern -->
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl -mr-16 -mt-16 group-hover/academic:bg-primary/10 transition-all duration-700"></div>
+                        
+                        <div class="flex items-center space-x-5 mb-10">
+                            <div class="w-12 h-12 glass rounded-2xl flex items-center justify-center text-primary shadow-inner">
+                                <i class="fas fa-graduation-cap"></i>
                             </div>
-                            <div class="flex justify-between items-start">
-                                <div class="flex-grow">
-                                    <p class="text-[9px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-1">AISSCE (Science)</p>
-                                    <p class="text-sm font-bold text-white">Future Campus School</p>
+                            <h3 class="text-sm font-black text-white uppercase tracking-[0.3em]">Academic Profile</h3>
+                        </div>
+
+                        <div class="space-y-12 relative before:absolute before:left-[7px] before:top-2 before:bottom-2 before:w-px before:bg-white/5">
+                            <!-- B.Tech -->
+                            <div class="relative pl-10 group/item">
+                                <div class="absolute left-0 top-1.5 w-[15px] h-[15px] rounded-full border-2 border-primary bg-dark group-hover/item:scale-125 transition-transform duration-500 z-10"></div>
+                                <div class="flex flex-col sm:flex-row justify-between items-baseline gap-2">
+                                    <div>
+                                        <p class="text-[10px] font-black text-primary uppercase tracking-widest mb-1">Bachelor of Technology</p>
+                                        <h4 class="text-base font-bold text-white leading-tight">Netaji Subhash Engineering College</h4>
+                                        <p class="text-[11px] text-slate-500 font-semibold mt-1 italic">Electronics & Communication Engineering</p>
+                                    </div>
+                                    <div class="flex flex-col items-end">
+                                        <p class="text-2xl font-black text-primary leading-none">8.25</p>
+                                        <p class="text-[8px] font-bold text-slate-500 uppercase tracking-widest mt-1">CGPA</p>
+                                    </div>
                                 </div>
-                                <div class="text-right ml-4">
-                                    <p class="text-2xl font-black text-white">93%</p>
-                                    <p class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Score</p>
+                                <p class="text-[10px] text-slate-600 font-bold mt-3 uppercase tracking-tighter">Class of 2025</p>
+                            </div>
+
+                            <!-- XII -->
+                            <div class="relative pl-10 group/item">
+                                <div class="absolute left-0 top-1.5 w-[15px] h-[15px] rounded-full border-2 border-white/20 bg-dark group-hover/item:border-primary transition-colors duration-500 z-10"></div>
+                                <div class="flex flex-col sm:flex-row justify-between items-baseline gap-2">
+                                    <div>
+                                        <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">AISSCE (Science)</p>
+                                        <h4 class="text-base font-bold text-slate-200">Future Campus School</h4>
+                                    </div>
+                                    <div class="flex flex-col items-end">
+                                        <p class="text-2xl font-black text-white leading-none">93%</p>
+                                        <p class="text-[8px] font-bold text-slate-500 uppercase tracking-widest mt-1">Aggregate</p>
+                                    </div>
                                 </div>
+                                <p class="text-[10px] text-slate-600 font-bold mt-2 uppercase tracking-tighter italic">Physics, Chemistry, Mathematics, Biology</p>
                             </div>
                         </div>
                     </div>

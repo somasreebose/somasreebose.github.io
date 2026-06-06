@@ -1,11 +1,11 @@
 // Navbar Scroll Effect
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add('glass', 'shadow-2xl', 'py-4');
+    if (window.scrollY > 20) {
+        navbar.classList.add('glass', 'glass-edge', 'shadow-2xl', 'py-4');
         navbar.classList.remove('py-6');
     } else {
-        navbar.classList.remove('glass', 'shadow-2xl', 'py-4');
+        navbar.classList.remove('glass', 'glass-edge', 'shadow-2xl', 'py-4');
         navbar.classList.add('py-6');
     }
 });

@@ -15,7 +15,10 @@
   background: rgba(30, 41, 59, 0.4);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-edge {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .glass-card {

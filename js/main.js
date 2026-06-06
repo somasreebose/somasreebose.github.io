@@ -2,11 +2,11 @@
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-        navbar.classList.add('bg-white', 'shadow-md', 'py-2');
-        navbar.classList.remove('py-4');
+        navbar.classList.add('glass', 'shadow-2xl', 'py-4');
+        navbar.classList.remove('py-6');
     } else {
-        navbar.classList.remove('bg-white', 'shadow-md', 'py-2');
-        navbar.classList.add('py-4');
+        navbar.classList.remove('glass', 'shadow-2xl', 'py-4');
+        navbar.classList.add('py-6');
     }
 });
 
@@ -15,25 +15,30 @@ const menuBtn = document.getElementById('menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 const mobileLinks = document.querySelectorAll('.mobile-link');
 
-menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-});
-
-mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
+if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
     });
-});
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+}
 
 // Intersection Observer for Fade-in Animations
 const observerOptions = {
-    threshold: 0.1
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
+            // Once visible, stop observing
+            observer.unobserve(entry.target);
         }
     });
 }, observerOptions);

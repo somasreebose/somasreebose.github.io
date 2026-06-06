@@ -40,6 +40,7 @@ npm run build:css
 ```
 
 ## Development Conventions
+- **Automatic Deployment:** After making stable changes and verifying them locally, **always** push the changes to the `main` branch to ensure the GitHub Pages site is updated and live.
 - **Utility-First:** Use Tailwind utility classes for styling whenever possible.
 - **Animations:** Use the `.fade-in` class in HTML for scroll-triggered animations.
 - **Responsiveness:** Always test changes on mobile and desktop viewports.

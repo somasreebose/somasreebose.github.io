@@ -67,6 +67,9 @@ if (contactForm) {
 
         // UI Loading State
         submitBtn.disabled = true;
+        const formElements = contactForm.querySelectorAll('input, textarea');
+        formElements.forEach(el => el.disabled = true);
+
         if (btnText) btnText.textContent = 'Sending...';
         formMessage.classList.add('hidden');
         formMessage.classList.remove('bg-green-500/10', 'text-green-500', 'bg-red-500/10', 'text-red-500');
@@ -79,6 +82,8 @@ if (contactForm) {
         })
         .then(response => {
             submitBtn.disabled = false;
+            formElements.forEach(el => el.disabled = false);
+            
             if (btnText) btnText.textContent = 'Send Message';
             
             formMessage.classList.remove('hidden');
@@ -89,6 +94,8 @@ if (contactForm) {
         })
         .catch(error => {
             submitBtn.disabled = false;
+            formElements.forEach(el => el.disabled = false);
+            
             if (btnText) btnText.textContent = 'Send Message';
             
             formMessage.classList.remove('hidden');
